@@ -56,7 +56,7 @@ $(document).ready(function () {
             `);
     
             card.click(function () {
-              window.location.href = `gallery.html?folder=${folder.id}&name=${encodeURIComponent(folder.name)}`;
+              window.location.href = `Gallery.html?folder=${folder.id}&name=${encodeURIComponent(folder.name)}`;
             });
             
               

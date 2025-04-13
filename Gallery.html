@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <title>Gallery</title>
+  <style>
+    body { background: #fff; font-family: sans-serif; margin: 0; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .image-grid img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="folderTitle"></h1>
+<div class="image-grid" id="imageContainer"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  function getQueryParam(param) {
+    return new URLSearchParams(window.location.search).get(param);
+  }
+
+  $(document).ready(function () {
+    const folderId = getQueryParam("folder");
+    const folderName = getQueryParam("name");
+
+    $("#folderTitle").text(decodeURIComponent(folderName || "Gallery"));
+
+    const imageCount = 100; // You can adjust based on expected max images
+    const $container = $("#imageContainer");
+
+    for (let i = 1; i <= imageCount; i++) {
+      const imgPath = `content/${folderId}/img${i}.jpg`;
+      const $img = $('<img>', {
+          src: imgPath,
+          alt: `img${i}`,
+          css: { cursor: 'pointer' }
+        });
+
+        $img.on("load", function () {
+          // Wrap with <a> tag only after image loads successfully
+          const $link = $('<a>', {
+            href: imgPath,
+            target: '_blank'
+          }).append($img);
+
+          $('#imageContainer').append($link);
+        });
+
+        $img.on("error", function () {
+          $(this).remove(); // remove broken image
+        });
+    }
+  });
+</script>
+
+</body>
+</html>

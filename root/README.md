@@ -14,6 +14,6 @@ JavaScript – Dynamic interactions
 
 **Installation & Setup**
 Clone the repository:
-git clone https://github.com/MohanasundaramNagaraj/MemoryPortraitsByNandhu.git
+git clone https://github.com/MohanasundaramNagaraj/Memory-Portraits-by-Nandhu.git
 
 Open index.html in a browser.

@@ -66,7 +66,7 @@ $(document).ready(function () {
           });
         });
 
-        // setTimeout(function(){
+ setTimeout(function(){
  /*=============== SWIPER PRODUCTS ===============*/
  new Swiper(".products__container", {
 

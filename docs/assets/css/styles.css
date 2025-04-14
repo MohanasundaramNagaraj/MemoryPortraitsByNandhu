@@ -235,7 +235,11 @@ body.dark-theme {
 
 /*=============== HOME ===============*/
 .home {
-  background-color: var(--bg-color);
+  background-image: url(https://mohanasundaramnagaraj.github.io/MemoryPortraitsByNandhu/assets/img/memory_1.jpg);
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
   transition: .4s; /*For animation dark mode*/
   height: 100vh;

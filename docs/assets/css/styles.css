@@ -243,6 +243,7 @@ body.dark-theme {
   overflow: hidden;
   transition: .4s; /*For animation dark mode*/
   height: 100vh;
+  color: white !important;
 }
 
 .home__container {
@@ -258,7 +259,7 @@ body.dark-theme {
 }
 
 .home__description {
-  color: var(--title-color);
+  
   margin: 1rem 0 2rem;
 }
 

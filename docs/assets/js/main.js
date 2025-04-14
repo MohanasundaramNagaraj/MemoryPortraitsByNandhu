@@ -68,26 +68,26 @@ $(document).ready(function () {
 
         // setTimeout(function(){
  /*=============== SWIPER PRODUCTS ===============*/
-//  new Swiper(".products__container", {
+ new Swiper(".products__container", {
 
-//   spaceBetween: 32,
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   loop: true,
+  spaceBetween: 32,
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
 
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-//   breakpoints: {
-//   1024: {
-//     spaceBetween: 72,
-//   },
-//   },
-// });
-//         },1000)
+  breakpoints: {
+  1024: {
+    spaceBetween: 72,
+  },
+  },
+});
+        },1000)
        
  });
 

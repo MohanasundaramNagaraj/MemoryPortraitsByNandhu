@@ -65,7 +65,7 @@ $(document).ready(function () {
             
           });
         });
-        
+
         // setTimeout(function(){
  /*=============== SWIPER PRODUCTS ===============*/
 //  new Swiper(".products__container", {
@@ -89,7 +89,7 @@ $(document).ready(function () {
 // });
 //         },1000)
        
-// });
+ });
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
